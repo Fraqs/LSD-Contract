@@ -6,9 +6,5 @@
 	"dependencies": {
 		"moment-timezone": "^0.5.31",
 		"typescript": "^4.0.5"
-	},
-	"exports": {
-		"./dto": "./src/dto",
-		"./eto": "./src/eto"
 	}
 }
