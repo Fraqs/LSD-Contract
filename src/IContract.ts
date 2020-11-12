@@ -88,5 +88,5 @@ export default interface IContract {
 	 * @param id The booking identifier
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	cancelBooking(id: IBookingIdentifier): Promise<void> | NotFoundError | InvalidInputError;
+	cancelBooking(id: IBookingIdentifier): Promise<void>;
 }
