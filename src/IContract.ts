@@ -5,6 +5,7 @@ import { ICarrierDetail } from './dto/carrier/';
 import { IReservationSummary, IReservationDetail } from './dto/reservation';
 import { IBookingDetail, IBookingIdentifier } from './dto/booking';
 import { IFlightIdentifier, IFlightSummary } from './dto/flight';
+import { NumberLiteralType } from 'typescript';
 
 /**
  * The contract for integration between the backend and frontend
@@ -38,7 +39,7 @@ export default interface IContract {
 	 * @returns A list with the extended information about the flights available on the defined route on the specific date.
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	getFlightsAvailable(departure: IAirportIdentifier, arrival: IAirportIdentifier, depart: Moment): Promise<IFlightSummary[]>;
+	getFlightsAvailable(departure: IAirportIdentifier, arrival: IAirportIdentifier, depart: number): Promise<IFlightSummary[]>;
 
 	/**
 	 * This method makes a flight reservation.
