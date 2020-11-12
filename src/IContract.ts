@@ -1,28 +1,16 @@
 import { Moment } from 'moment-timezone';
 
-import IAirportDetail from './dto/airport/IAirportDetail';
-import IAirportIdentifier from './dto/airport/IAirportIdentifier';
+import { IAirportDetail, IAirportIdentifier } from './dto/airport';
+import { ICarrierDetail } from './dto/carrier/';
+import { IReservationIdentifier, IReservationSummary, IReservationDetail } from './dto/reservation';
+import { IPassenger } from './dto/passenger/';
+import { IBookingDetail, IBookingIdentifier } from './dto/booking';
+import { IFlightIdentifier, IFlightSummary } from './dto/flight';
 
-import ICarrierDetail from './dto/carrier/ICarrierDetail';
-
-import IReservationIdentifier from './dto/reservation/IReservationIdentifier';
-import IReservationSummary from './dto/reservation/IReservationSummary';
-import IReservationDetail from './dto/reservation/IReservationDetail';
-
-import IPassenger from './dto/passenger/IPassenger';
-
-import IBookingDetail from './dto/booking/IBookingDetail';
-import IBookingIdentifier from './dto/booking/IBookingIdentifier';
-
-import IFlightIdentifier from './dto/flight/IFlightIdentifier';
-import IFlightSummary from './dto/flight/IFlightSummary';
-
-import NotFoundError from './eto/NotFoundError';
-import InvalidInputError from './eto/InvalidInputError';
-import InconsistentLengthError from './eto/InconsistentLengthError';
+import { NotFoundError, InvalidInputError, InconsistentLengthError } from './eto';
 
 /**
- * The contract for integration between the backend and frontent
+ * The contract for integration between the backend and frontend
  * @author TEAM-B-SOFT-2020
  * @copyright TEAM-B-SOFT-2020
  */
@@ -34,7 +22,7 @@ export default interface IContract {
 	 * @returns Carrier detail with name and IATA
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	getCarrierInformation(iata: string): ICarrierDetail | NotFoundError | InvalidInputError;
+	getCarrierInformation(iata: string): Promise<ICarrierDetail> | NotFoundError | InvalidInputError;
 
 	/**
 	 * A getter for Airport information
@@ -42,7 +30,7 @@ export default interface IContract {
 	 * @returns Airport detail with information about its timezone and IATA
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	getAirportInformation(iata: string): IAirportDetail | NotFoundError | InvalidInputError;
+	getAirportInformation(iata: string): Promise<IAirportDetail> | NotFoundError | InvalidInputError;
 
 	/**
 	 * This method returns the flights available between two given airports on a given day.
@@ -53,7 +41,11 @@ export default interface IContract {
 	 * @returns A list with the extended information about the flights available on the defined route on the specific date.
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	getFlightsAvailable(departure: IAirportIdentifier, arrival: IAirportIdentifier, depart: Moment): IFlightSummary[] | NotFoundError | InvalidInputError;
+	getFlightsAvailable(
+		departure: IAirportIdentifier,
+		arrival: IAirportIdentifier,
+		depart: Moment
+	): Promise<IFlightSummary[]> | NotFoundError | InvalidInputError;
 
 	/**
 	 * This method makes a flight reservation.
@@ -63,14 +55,14 @@ export default interface IContract {
 	 * @returns An identifier for the reservation with price included
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	reserveFlight(id: IFlightIdentifier, amountSeats: number): IReservationSummary | NotFoundError | InvalidInputError;
+	reserveFlight(id: IFlightIdentifier, amountSeats: number): Promise<IReservationSummary> | NotFoundError | InvalidInputError;
 
 	/**
 	 * This method books a trip of already reserved flights.
 	 *
 	 * @param reservationDetails A list of reservation details with reservation ids and passenger lists.
 	 * Each passenger list should have the length of the perviously defined "amountSeats" of the reservation.
-	 * @param creditCardNumber The creditcard number of the booking.
+	 * @param creditCardNumber The credit card number of the booking.
 	 * @param frequentFlyerNumber The frequent flyer number of the booker
 	 * @returns A booking detail with the price and list of flights
 	 * @throws [[InconsistentLengthError]] | [[NotFoundError]] | [[InvalidInputError]]
@@ -79,7 +71,7 @@ export default interface IContract {
 		reservationDetails: IReservationDetail[],
 		creditCardNumber: number,
 		frequentFlyerNumber?: number
-	): IBookingDetail | InconsistentLengthError | NotFoundError | InvalidInputError;
+	): Promise<IBookingDetail> | InconsistentLengthError | NotFoundError | InvalidInputError;
 
 	/**
 	 * A getter for bookings
@@ -88,7 +80,7 @@ export default interface IContract {
 	 * @returns A booking detail with the price and list of flights
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	getBooking(id: IBookingIdentifier): IBookingDetail | NotFoundError | InvalidInputError;
+	getBooking(id: IBookingIdentifier): Promise<IBookingDetail> | NotFoundError | InvalidInputError;
 
 	/**
 	 * This method cancels a booking
@@ -96,5 +88,5 @@ export default interface IContract {
 	 * @param id The booking identifier
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	cancelBooking(id: IBookingIdentifier): void | NotFoundError | InvalidInputError;
+	cancelBooking(id: IBookingIdentifier): Promise<void> | NotFoundError | InvalidInputError;
 }
