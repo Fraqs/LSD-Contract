@@ -10,13 +10,21 @@ _Large System Development, fall 2020_
   
 **Stephan Duelund Djurhuus**
   
-![cover image](/assets/cover.png?0.3787359857830821 )  
+![cover image](/assets/cover.png?0.12343840223407088 )  
   
 ##  Content
   
   
+- [Components](/#components )
 - [Installation](/#installation )
 - [Usage](/#usage )
+  
+##  Components
+  
+  
+-   [Backend](https://github.com/Fraqs/LSD-Project.Backend ), Handles Database Management.
+-   [Frontend](https://github.com/Fraqs/LSD-Project.Frontend ), Handles REST API and Server Sided Rendering.
+-   [Contract](https://github.com/Fraqs/LSD-Project.Contract ), Handles Contract Interface & Data Transfer Objects.
   
 ##  Installation
   
