@@ -18,6 +18,8 @@ This document is created with the vs-code extension - Markdown Preview Enhanced
 
 _Large System Development, fall 2020_
 
+**Stephan Duelund Djurhuus**
+
 @import "/assets/cover.png" {alt="cover image"}
 
 ## Content {ignore=true}
@@ -25,6 +27,40 @@ _Large System Development, fall 2020_
 <!-- Auto-generated Table of Content -->
 
 [toc]
+
+## Installation
+
+```bash
+# bash
+yarn add Fraqs/LSD-Project.Contract
+```
+
+> Installing dependencies after this may force you to reinstall it due to cached `yarn.lock` doesnt conatin GitHub modules.
+
+## Usage
+
+Import contract interface.
+
+```js
+// typescript
+import IContract from 'contract';
+```
+
+import DTO's.
+
+```js
+// typescript
+import { IBookingDetail } from 'contract/src/dto/booking';
+```
+
+> The `dto` folder contains a variety of entities, `booking` is just an example.
+
+import ETO's.
+
+```js
+// typescript
+import { NotFoundError } from 'contract/src/eto';
+```
 
 ## {ignore=true}
 
