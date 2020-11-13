@@ -35,7 +35,7 @@ _Large System Development, fall 2020_
 yarn add Fraqs/LSD-Project.Contract
 ```
 
-> Installing dependencies after this may force you to reinstall it due to cached `yarn.lock` doesnt conatin GitHub modules.
+> Installing dependencies after this may force you to reinstall it due to cached `yarn.lock` doesn't contain GitHub modules.
 
 ## Usage
 
