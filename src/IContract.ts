@@ -1,11 +1,8 @@
-import { Moment } from 'moment-timezone';
-
 import { IAirportDetail, IAirportIdentifier } from './dto/airport';
 import { ICarrierDetail } from './dto/carrier/';
 import { IReservationSummary, IReservationDetail } from './dto/reservation';
 import { IBookingDetail, IBookingIdentifier } from './dto/booking';
 import { IFlightIdentifier, IFlightSummary } from './dto/flight';
-import { NumberLiteralType } from 'typescript';
 
 /**
  * The contract for integration between the backend and frontend
