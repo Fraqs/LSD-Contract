@@ -14,7 +14,7 @@ This document is created with the vs-code extension - Markdown Preview Enhanced
 > https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced
 -->
 
-# LSD Contract | GitHub NPM Module {ignore=true}
+# LSD Project Contract | GitHub NPM Module {ignore=true}
 
 _Large System Development, fall 2020_
 

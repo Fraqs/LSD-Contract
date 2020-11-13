@@ -3,7 +3,7 @@
   
   
   
-#  LSD Contract | GitHub NPM Module
+#  LSD Project Contract | GitHub NPM Module
   
   
 _Large System Development, fall 2020_
