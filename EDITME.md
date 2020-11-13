@@ -46,7 +46,7 @@ Import contract interface.
 import IContract from 'contract';
 ```
 
-import DTO's.
+Import Data Transfer Objects.
 
 ```js
 // typescript
@@ -55,7 +55,7 @@ import { IBookingDetail } from 'contract/src/dto/booking';
 
 > The `dto` folder contains a variety of entities, `booking` is just an example.
 
-import ETO's.
+Import Error Transfer Objects.
 
 ```js
 // typescript
