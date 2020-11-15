@@ -1,8 +1,8 @@
 import AirportIdentifier from './AirportIdentifier';
 
 export default class AirportDetail extends AirportIdentifier {
-	name: string;
-	timeZone: string;
+	readonly name: string;
+	readonly timeZone: string;
 
 	constructor(iata: string, name: string, timeZone: string) {
 		super(iata);

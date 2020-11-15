@@ -3,8 +3,8 @@ import { CarrierDetail } from '../carrier';
 import Flight from './Flight';
 
 export default class FlightSummary extends Flight {
-	availableSeats: number;
-	seatPrice: number;
+	readonly availableSeats: number;
+	readonly seatPrice: number;
 
 	constructor(
 		id: string,

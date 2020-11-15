@@ -1,5 +1,5 @@
 export default class AirportIdentifier {
-	iata: string;
+	readonly iata: string;
 
 	constructor(iata: string) {
 		this.iata = iata;

@@ -3,10 +3,10 @@ import FlightBookingDetail from '../flight/FlightBookingDetail';
 import BookingIdentifier from './BookingIdentifier';
 
 export default class BookingDetail extends BookingIdentifier {
-	frequentFlyerId: string;
-	creditCardNumber: number;
-	price: number;
-	flightBookings: FlightBookingDetail[];
+	readonly frequentFlyerId: string;
+	readonly creditCardNumber: number;
+	readonly price: number;
+	readonly flightBookings: FlightBookingDetail[];
 
 	constructor(id: string, frequentFlyerId: string, creditCardNumber: number, price: number, flightBookings: FlightBookingDetail[]) {
 		super(id);

@@ -1,7 +1,7 @@
 import Passenger from './Passenger';
 
 export default class FlightPassenger extends Passenger {
-	pnr: string;
+	readonly pnr: string;
 
 	constructor(firstName: string, lastName: string, pnr: string) {
 		super(firstName, lastName);

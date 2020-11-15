@@ -3,13 +3,13 @@ import AirportIdentifier from '../airport/AirportIdentifier';
 import FlightIdentifier from './FlightIdentifier';
 
 export default class Flight extends FlightIdentifier {
-	carrier: CarrierDetail;
+	readonly carrier: CarrierDetail;
 
-	departureDate: number;
-	arrivalDate: number;
+	readonly departureDate: number;
+	readonly arrivalDate: number;
 
-	departureAirport: AirportIdentifier;
-	arrivalAirport: AirportIdentifier;
+	readonly departureAirport: AirportIdentifier;
+	readonly arrivalAirport: AirportIdentifier;
 
 	constructor(
 		id: string,

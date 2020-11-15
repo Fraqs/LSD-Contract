@@ -1,5 +1,5 @@
 export default class FlightIdentifier {
-	flightCode: string;
+	readonly flightCode: string;
 
 	constructor(flightCode: string) {
 		this.flightCode = flightCode;

@@ -4,7 +4,7 @@ import { CarrierDetail } from '../carrier';
 import { AirportIdentifier } from '../airport';
 
 export default class FlightBookingDetail extends Flight {
-	passengers: FlightPassenger[];
+	readonly passengers: FlightPassenger[];
 
 	constructor(
 		id: string,

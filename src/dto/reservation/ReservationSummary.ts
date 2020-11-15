@@ -1,7 +1,7 @@
 import ReservationIdentifier from './ReservationIdentifier';
 
 export default class ReservationSummary extends ReservationIdentifier {
-	price: number;
+	readonly price: number;
 
 	constructor(id: string, price: number) {
 		super(id);
