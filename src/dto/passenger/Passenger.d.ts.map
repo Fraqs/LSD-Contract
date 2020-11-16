@@ -1,0 +1,1 @@
+{"version":3,"file":"Passenger.d.ts","sourceRoot":"","sources":["Passenger.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,OAAO,SAAS;IAC7B,QAAQ,CAAC,SAAS,EAAE,MAAM,CAAC;IAC3B,QAAQ,CAAC,QAAQ,EAAE,MAAM,CAAC;gBAEd,SAAS,EAAE,MAAM,EAAE,QAAQ,EAAE,MAAM;CAI/C"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"ReservationDetail.d.ts","sourceRoot":"","sources":["ReservationDetail.ts"],"names":[],"mappings":"AAAA,OAAO,SAAS,MAAM,wBAAwB,CAAC;AAC/C,OAAO,qBAAqB,MAAM,yBAAyB,CAAC;AAE5D,MAAM,CAAC,OAAO,OAAO,iBAAkB,SAAQ,qBAAqB;IACnE,QAAQ,CAAC,UAAU,EAAE,SAAS,EAAE,CAAC;gBAErB,EAAE,EAAE,MAAM,EAAE,UAAU,EAAE,SAAS,EAAE;CAI/C"}
