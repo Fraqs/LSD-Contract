@@ -57,7 +57,7 @@ Import Data Transfer Objects.
 
 ```js
 // typescript
-import { IBookingDetail } from 'contract/src/dto/booking';
+import { IBookingDetail } from 'contract/dist/dto/booking';
 ```
 
 > The `dto` folder contains a variety of entities, `booking` is just an example.
@@ -66,7 +66,7 @@ Import Error Transfer Objects.
 
 ```js
 // typescript
-import { NotFoundError } from 'contract/src/eto';
+import { NotFoundError } from 'contract/dist/eto';
 ```
 
 ## {ignore=true}

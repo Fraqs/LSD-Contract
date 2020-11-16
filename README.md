@@ -10,7 +10,7 @@ _Large System Development, fall 2020_
   
 **Stephan Duelund Djurhuus**
   
-![cover image](/assets/cover.png?0.5893448898315765 )  
+![cover image](/assets/cover.png?0.265308519151666 )  
   
 ##  Content
   
@@ -51,7 +51,7 @@ Import Data Transfer Objects.
   
 ```js
 // typescript
-import { IBookingDetail } from 'contract/src/dto/booking';
+import { IBookingDetail } from 'contract/dist/dto/booking';
 ```
   
 > The `dto` folder contains a variety of entities, `booking` is just an example.
@@ -60,7 +60,7 @@ Import Error Transfer Objects.
   
 ```js
 // typescript
-import { NotFoundError } from 'contract/src/eto';
+import { NotFoundError } from 'contract/dist/eto';
 ```
   
 ## 
