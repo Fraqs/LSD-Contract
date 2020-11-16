@@ -10,7 +10,7 @@ _Large System Development, fall 2020_
   
 **Stephan Duelund Djurhuus**
   
-![cover image](/assets/cover.png?0.09108537320833254 )  
+![cover image](/assets/cover.png?0.7652969573436041 )  
   
 ##  Content
   
@@ -18,6 +18,12 @@ _Large System Development, fall 2020_
 - [Components](/#components )
 - [Installation](/#installation )
 - [Usage](/#usage )
+  - [Contract Interface](/#contract-interface )
+  - [Data Transfer Objects](/#data-transfer-objects )
+  - [Error Transfer Objects](/#error-transfer-objects )
+  - [Duck Typing](/#duck-typing )
+    - [Interface Example](/#interface-example )
+    - [Class Example](/#class-example )
   
 ##  Components
   
@@ -40,12 +46,18 @@ yarn add Fraqs/LSD-Project.Contract
 ##  Usage
   
   
+###  Contract Interface
+  
+  
 Import contract interface.
   
 ```js
 // typescript
 import IContract from 'contract';
 ```
+  
+###  Data Transfer Objects
+  
   
 Import Data Transfer Objects.
   
@@ -56,11 +68,51 @@ import { IBookingDetail } from 'contract/dist/dto/booking';
   
 > The `dto` folder contains a variety of entities, `booking` is just an example.
   
+###  Error Transfer Objects
+  
+  
 Import Error Transfer Objects.
   
 ```js
 // typescript
 import { NotFoundError } from 'contract/dist/eto';
+```
+  
+###  Duck Typing
+  
+  
+_"If it walks like a duck and it quacks like a duck, then it must be a duck"_
+  
+With duck typing objects doesn't have to be instantiated from a class. A simple `object` containing similar fields as the `class` or `interface` will be seen as an instance of it.
+  
+####  Interface Example
+  
+  
+```javascript
+// typescript
+interface IPerson {
+	name: string;
+}
+  
+const p1: IPerson = { age: 123 }; // type error (missing field "name")
+const p2: IPerson = { name: 'myName' }; // acceptable
+```
+  
+####  Class Example
+  
+  
+```javascript
+// typescript
+class Person {
+	name: string;
+  
+	constructor(name: string) {
+		this.name = name;
+	}
+}
+  
+const p1: Person = { age: 123 }; // type error (missing field "name")
+const p2: Person = { name: 'myName' }; // acceptable
 ```
   
 ## 
