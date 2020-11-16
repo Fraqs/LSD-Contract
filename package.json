@@ -2,7 +2,7 @@
 	"name": "contract",
 	"version": "1.0.0",
 	"license": "MIT",
-	"main": "./dist/index.js",
+	"main": "./dist/IContract.js",
 	"types": "./dist/*.d.ts",
 	"dependencies": {
 		"typescript": "^4.0.5"
