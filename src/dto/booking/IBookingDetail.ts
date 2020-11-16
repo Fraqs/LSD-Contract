@@ -3,8 +3,8 @@ import IFlightBookingDetail from '../flight/IFlightBookingDetail';
 import IBookingIdentifier from './IBookingIdentifier';
 
 export default interface IBookingDetail extends IBookingIdentifier {
-	frequentFlyerId: string;
-	creditCardNumber: number;
-	price: number;
-	flightBookings: IFlightBookingDetail[];
+	readonly frequentFlyerId: string;
+	readonly creditCardNumber: number;
+	readonly price: number;
+	readonly flightBookings: IFlightBookingDetail[];
 }

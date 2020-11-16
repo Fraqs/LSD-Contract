@@ -1,3 +1,3 @@
 export default interface IAirportIdentifier {
-	iata: string;
+	readonly iata: string;
 }

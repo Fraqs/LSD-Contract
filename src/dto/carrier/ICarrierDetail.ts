@@ -1,4 +1,4 @@
 export default interface ICarrierDetail {
-	iata: string;
-	name: string;
+	readonly iata: string;
+	readonly name: string;
 }

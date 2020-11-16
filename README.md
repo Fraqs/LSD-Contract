@@ -10,7 +10,7 @@ _Large System Development, fall 2020_
   
 **Stephan Duelund Djurhuus**
   
-![cover image](/assets/cover.png?0.265308519151666 )  
+![cover image](/assets/cover.png?0.09108537320833254 )  
   
 ##  Content
   

@@ -1,3 +1,3 @@
 export default interface IFlightIdentifier {
-	flightCode: string;
+	readonly flightCode: string;
 }

@@ -1,4 +1,4 @@
 export default interface IPassenger {
-	firstName: string;
-	lastName: string;
+	readonly firstName: string;
+	readonly lastName: string;
 }
