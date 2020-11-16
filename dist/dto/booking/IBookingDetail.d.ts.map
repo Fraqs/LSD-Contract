@@ -1,0 +1,1 @@
+{"version":3,"file":"IBookingDetail.d.ts","sourceRoot":"","sources":["../../../src/dto/booking/IBookingDetail.ts"],"names":[],"mappings":"AAAA,OAAO,oBAAoB,MAAM,gCAAgC,CAAC;AAElE,OAAO,kBAAkB,MAAM,sBAAsB,CAAC;AAEtD,MAAM,CAAC,OAAO,WAAW,cAAe,SAAQ,kBAAkB;IACjE,eAAe,EAAE,MAAM,CAAC;IACxB,gBAAgB,EAAE,MAAM,CAAC;IACzB,KAAK,EAAE,MAAM,CAAC;IACd,cAAc,EAAE,oBAAoB,EAAE,CAAC;CACvC"}
