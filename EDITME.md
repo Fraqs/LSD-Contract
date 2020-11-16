@@ -50,7 +50,7 @@ yarn add Fraqs/LSD-Project.Contract
 
 Import contract interface.
 
-```js
+```typescript
 // typescript
 import IContract from 'contract';
 ```
@@ -59,7 +59,7 @@ import IContract from 'contract';
 
 Import Data Transfer Objects.
 
-```js
+```typescript
 // typescript
 import { IBookingDetail } from 'contract/dist/dto/booking';
 ```
@@ -70,7 +70,7 @@ import { IBookingDetail } from 'contract/dist/dto/booking';
 
 Import Error Transfer Objects.
 
-```js
+```typescript
 // typescript
 import { NotFoundError } from 'contract/dist/eto';
 ```
@@ -83,10 +83,10 @@ With duck typing objects doesn't have to be instantiated from a class. A simple 
 
 #### Interface Example
 
-```javascript
+```typescript
 // typescript
 interface IPerson {
-	name: string;
+    name: string;
 }
 
 const p1: IPerson = { age: 123 }; // type error (missing field "name")
@@ -95,14 +95,14 @@ const p2: IPerson = { name: 'myName' }; // acceptable
 
 #### Class Example
 
-```javascript
+```typescript
 // typescript
 class Person {
-	name: string;
+    name: string;
 
-	constructor(name: string) {
-		this.name = name;
-	}
+    constructor(name: string) {
+        this.name = name;
+    }
 }
 
 const p1: Person = { age: 123 }; // type error (missing field "name")
