@@ -1,8 +1,8 @@
 {
 	"name": "contract",
 	"version": "1.0.0",
-	"main": "dist/index.js",
 	"license": "MIT",
+	"main": "./dist/index.js",
 	"types": "./dist/*.d.ts",
 	"dependencies": {
 		"typescript": "^4.0.5"
