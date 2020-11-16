@@ -1,1 +1,0 @@
-{"version":3,"file":"IFlightBookingDetail.d.ts","sourceRoot":"","sources":["IFlightBookingDetail.ts"],"names":[],"mappings":"AAAA,OAAO,OAAO,MAAM,WAAW,CAAC;AAChC,OAAO,gBAAgB,MAAM,+BAA+B,CAAC;AAE7D,MAAM,CAAC,OAAO,WAAW,oBAAqB,SAAQ,OAAO;IAC5D,UAAU,EAAE,gBAAgB,EAAE,CAAC;CAC/B"}
