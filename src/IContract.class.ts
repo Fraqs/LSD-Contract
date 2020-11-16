@@ -1,5 +1,5 @@
 import { AirportDetail, AirportIdentifier } from './dto/airport';
-import { CarrierDetail } from './dto/carrier/';
+import { CarrierDetail } from './dto/carrier';
 import { ReservationSummary, ReservationDetail } from './dto/reservation';
 import { BookingDetail, BookingIdentifier } from './dto/booking';
 import { FlightIdentifier, FlightSummary } from './dto/flight';
