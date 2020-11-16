@@ -1,8 +1,8 @@
-import { AirportDetail, AirportIdentifier } from './dto/airport';
-import { CarrierDetail } from './dto/carrier';
-import { ReservationSummary, ReservationDetail } from './dto/reservation';
-import { BookingDetail, BookingIdentifier } from './dto/booking';
-import { FlightIdentifier, FlightSummary } from './dto/flight';
+import { IAirportDetail, IAirportIdentifier } from './dto/airport';
+import { ICarrierDetail } from './dto/carrier';
+import { IReservationSummary, IReservationDetail } from './dto/reservation';
+import { IBookingDetail, IBookingIdentifier } from './dto/booking';
+import { IFlightIdentifier, IFlightSummary } from './dto/flight';
 
 /**
  * The contract for integration between the backend and frontend
@@ -17,7 +17,7 @@ export default interface IContract {
 	 * @returns Carrier detail with name and IATA
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	getCarrierInformation(iata: string): Promise<CarrierDetail>;
+	getCarrierInformation(iata: string): Promise<ICarrierDetail>;
 
 	/**
 	 * A getter for Airport information
@@ -25,7 +25,7 @@ export default interface IContract {
 	 * @returns Airport detail with information about its timezone and IATA
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	getAirportInformation(iata: string): Promise<AirportDetail>;
+	getAirportInformation(iata: string): Promise<IAirportDetail>;
 
 	/**
 	 * This method returns the flights available between two given airports on a given day.
@@ -36,7 +36,7 @@ export default interface IContract {
 	 * @returns A list with the extended information about the flights available on the defined route on the specific date.
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	getFlightsAvailable(departure: AirportIdentifier, arrival: AirportIdentifier, depart: number): Promise<FlightSummary[]>;
+	getFlightsAvailable(departure: IAirportIdentifier, arrival: IAirportIdentifier, depart: number): Promise<IFlightSummary[]>;
 
 	/**
 	 * This method makes a flight reservation.
@@ -46,7 +46,7 @@ export default interface IContract {
 	 * @returns An identifier for the reservation with price included
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	reserveFlight(id: FlightIdentifier, amountSeats: number): Promise<ReservationSummary>;
+	reserveFlight(id: IFlightIdentifier, amountSeats: number): Promise<IReservationSummary>;
 
 	/**
 	 * This method books a trip of already reserved flights.
@@ -58,7 +58,7 @@ export default interface IContract {
 	 * @returns A booking detail with the price and list of flights
 	 * @throws [[InconsistentLengthError]] | [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	createBooking(reservationDetails: ReservationDetail[], creditCardNumber: number, frequentFlyerNumber?: number): Promise<BookingDetail>;
+	createBooking(reservationDetails: IReservationDetail[], creditCardNumber: number, frequentFlyerNumber?: number): Promise<IBookingDetail>;
 
 	/**
 	 * A getter for bookings
@@ -67,7 +67,7 @@ export default interface IContract {
 	 * @returns A booking detail with the price and list of flights
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	getBooking(id: BookingIdentifier): Promise<BookingDetail>;
+	getBooking(id: IBookingIdentifier): Promise<IBookingDetail>;
 
 	/**
 	 * This method cancels a booking
@@ -75,5 +75,5 @@ export default interface IContract {
 	 * @param id The booking identifier
 	 * @throws [[NotFoundError]] | [[InvalidInputError]]
 	 */
-	cancelBooking(id: BookingIdentifier): Promise<void>;
+	cancelBooking(id: IBookingIdentifier): Promise<void>;
 }
