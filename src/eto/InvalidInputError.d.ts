@@ -1,5 +1,4 @@
-export default class InvalidInputError extends Error {
-	constructor(message: string) {
-		super(message);
-	}
+declare class InvalidInputError extends Error {
+	message: string;
+	constructor(message: string);
 }

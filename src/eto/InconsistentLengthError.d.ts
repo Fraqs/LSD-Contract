@@ -1,5 +1,4 @@
-export default class InconsistentLengthError extends Error {
-	constructor(message: string) {
-		super(message);
-	}
+declare class InconsistentLengthError extends Error {
+	message: string;
+	constructor(message: string);
 }
